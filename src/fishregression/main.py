@@ -32,7 +32,8 @@ def lr_api(length: float):
     """
  ### 예측해서 결과 return
     weight = run_prediction(length)
-    return{
-            "length":length
-            "weight":weight
+    
+    return {
+                "length":length
+                "weight":weight
             }
