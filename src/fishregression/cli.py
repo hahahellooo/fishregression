@@ -1,6 +1,3 @@
-
-
-
 def predict():
     length = float(input("물고기의 무게를 입력하세요: "))
 
