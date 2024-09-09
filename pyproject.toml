@@ -5,7 +5,9 @@ description = "Default template for PDM package"
 authors = [
     {name = "hahahellooo", email = "hahahello777@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "scikit-learn>=1.5.1",
+]
 requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +15,7 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[tool.pdm.dev-dependencies]
+matplotlib = []
+notebook = []
