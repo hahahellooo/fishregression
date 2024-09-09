@@ -18,7 +18,7 @@ license = {text = "MIT"}
 distribution = true
 
 [project.scripts]
-pp = 'fishregression.cli:predict' 
+predict-fish = 'fishregression.cli:predict' 
 
 [tool.pdm.dev-dependencies]
 test = [
