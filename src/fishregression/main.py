@@ -1,7 +1,7 @@
 from typing import Union
 from fastapi import FastAPI
 import pickle
-from fishregression import get_model_path
+from fishregression.model import get_model_path
 
 app = FastAPI()
 
