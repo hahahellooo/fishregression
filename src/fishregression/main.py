@@ -35,6 +35,6 @@ def lr_api(length: float):
     prediction = run_prediction(length)
     
     return {
-                "length":length
+                "length":length,
                 "prediction":prediction
             }
