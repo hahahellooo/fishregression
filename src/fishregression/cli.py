@@ -10,7 +10,7 @@ def lr_api(length):
         'length': length,
     }
 
-    response = requests.get('http://127.0.0.1:8001/fish_linearpredictor', params=params, headers=headers)
+    response = requests.get('http://127.0.0.1:8001/fish_ml_regression', params=params, headers=headers)
     data=json.loads(response.text)
     r=data['prediction']
     return r
@@ -26,7 +26,7 @@ def knn_api(length,weight,n_neighbors=5):
         'weight': weight,
     }
 
-    response = requests.get('http://127.0.0.1:8002/fish_mlpredictor', params=params, headers=headers)
+    response = requests.get('http://127.0.0.1:8002/fish_ml_predictor', params=params, headers=headers)
     data=json.loads(response.text)
     r=data['prediction']
     

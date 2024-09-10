@@ -17,7 +17,7 @@ def read_root():
     return {"Hello": "fish world"}
 
 
-@app.get("/lr_api")
+@app.get("fish_ml_regression")
 def lr_api(length: float):
     """
     물고기의 무게를 예측하는 함수
@@ -31,9 +31,9 @@ def lr_api(length: float):
             length(flozt): 물고기 길이(cm)
     """
  ### 예측해서 결과 return
-    weight = run_prediction(length)
+    prediction = run_prediction(length)
     
     return {
                 "length":length
-                "weight":weight
+                "prediction":weight
             }
