@@ -10,8 +10,8 @@ def run_prediction(length:float):
     model_path = get_model_path()
     with open(model_path, "rb") as f:
         fish_model = pickle.load(f)
-        prediction = fish_model.predict([[length ** 2, length]])
-        return float(prediction[0])
+    prediction = fish_model.predict([[length ** 2, length]])
+    return float(prediction[0])
 
 @app.get("/")
 def read_root():
