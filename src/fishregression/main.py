@@ -36,5 +36,5 @@ def lr_api(length: float):
     
     return {
                 "length":length
-                "prediction":weight
+                "prediction":prediction
             }
