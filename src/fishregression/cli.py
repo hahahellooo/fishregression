@@ -21,7 +21,7 @@ def knn_api(length,weight,n_neighbors=5):
     }
 
     params = {
-        'n_neighbors': '5',
+        'n_neighbors': n_neighbors,
         'length': length,
         'weight': weight,
     }
@@ -39,7 +39,7 @@ def predict():
     weight = lr_api(length)
 
     # 물고기 분류 API  호출
-    fish_class = knn_api(length,  weight)
+    fish_class = knn_api(length, weight, n_neighbors=5)
 
     print(f"length:{length} 물고기는 weight:{weight} 으로 예측되며 종류는 {fish_class} 입니다.")
 
