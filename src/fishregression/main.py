@@ -1,7 +1,8 @@
 from typing import Union
 from fastapi import FastAPI
 import pickle
-from fishregression.model import get_model_path
+from fishregression.model.manager import get_model_path
+
 app = FastAPI()
 
 # 무게 예측 함수
