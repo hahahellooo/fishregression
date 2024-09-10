@@ -18,7 +18,7 @@ def read_root():
     return {"Hello": "fish world"}
 
 
-@app.get("fish_ml_regression")
+@app.get("/fish_ml_regression")
 def lr_api(length: float):
     """
     물고기의 무게를 예측하는 함수
