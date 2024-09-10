@@ -2,6 +2,7 @@ import requests
 import json
 
 def lr_api(length):
+
     headers = {
         'accept': 'application/json',
     }
@@ -10,10 +11,7 @@ def lr_api(length):
         'length': length,
     }
 
-    response = requests.get('http://127.0.0.1:8001/fish_ml_regression', params=params, headers=headers)
-    data=json.loads(response.text)
-    r=data['prediction']
-    return r
+response = requests.get('http://127.0.0.1:8001/fish_ml_regression', params=params, headers=headers)
 
 def knn_api(length,weight,n_neighbors=5):
     headers = {
