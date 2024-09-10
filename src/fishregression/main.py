@@ -7,7 +7,8 @@ app = FastAPI()
 
 # 무게 예측 함수
 def run_prediction(length:float):
-    with open("/home/hahahellooo/code/fishregression/note/model.pkl", "wb") as f:
+    model_path = get_model_path()
+    with open(model_path, "rb") as f:
         fish_model = pickle.load(f)
         prediction = fish_model.predict([[length ** 2, length]])
         return float(prediction[0])
